@@ -1,42 +1,26 @@
-# tal_kafka-cookbook
+##tal_kafka
 
-TODO: Enter the cookbook description here.
+A wrapper cookbook to install Apache kafka using the community cookbooks for Apache Kafka and zookeeper
 
-## Supported Platforms
+###Platforms
 
-TODO: List your supported platforms.
+Debian, Ubuntu
+Red Hat/CentOS/Scientific (6.0+ required) - "EL6-family"
 
-## Attributes
+###Tested on:
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['tal_kafka']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Ubuntu 14.04
+Centos 7.1
 
-## Usage
+###Usage
 
-### tal_kafka::default
+On systems that doesnt have an installed zookeeper, use recipe[postgresql] on a run list else use 'recipe[postgresql::server]', 'recipe[postgresql::configure]' & 'recipe[postgresql::service]'
 
-Include `tal_kafka` in your node's `run_list`:
+###License and Author
 
-```json
-{
-  "run_list": [
-    "recipe[tal_kafka::default]"
-  ]
-}
-```
+Author:: Talentica/shantanupanda
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-## License and Authors
+http://www.apache.org/licenses/LICENSE-2.0
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
